@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "977612628028",
+    "firebase_url": "https://json-widget.firebaseio.com",
+    "project_id": "json-widget",
+    "storage_bucket": "json-widget.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977612628028:android:a91538d210a0b423522339",
+        "android_client_info": {
+          "package_name": "freaky.devs.jsonwidget"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "977612628028-pr5cp8fejb14e5vvatbvqriah05615na.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCB2xBXLR4s41exrZxOEj5nprtBHMnceNo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "977612628028-pr5cp8fejb14e5vvatbvqriah05615na.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
