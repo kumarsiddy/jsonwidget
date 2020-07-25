@@ -1,0 +1,187 @@
+{
+  "type": "Stack",
+  "children": [
+    {
+      "type": "Container",
+      "height": 120.0,
+      "color": "#204866"
+    },
+    {
+      "type": "Container",
+      "margin": "0,12,0,0",
+      "child": {
+        "type": "Container",
+        "dynamicWidth": 1.0,
+        "dynamicHeight": 0.78,
+        "padding": "32,0,32,0",
+        "decoration": {
+          "color": "#FFFFFF",
+          "borderRadius": "24,24,24,24",
+          "boxShadow": {
+            "color": "#EBEFF5",
+            "offset": "0,3"
+          }
+        },
+        "child": {
+          "type": "SingleChildScrollView",
+          "child": {
+            "type": "FormBuilder",
+            "child": {
+              "type": "Column",
+              "mainAxisSize": "min",
+              "mainAxisAlignment": "spaceBetween",
+              "crossAxisAlignment": "start",
+              "children": [
+                {
+                  "type": "SizedBox",
+                  "height": 32.0
+                },
+                {
+                  "type": "Text",
+                  "color": "#204866",
+                  "textSpan": {
+                    "type": "TextSpan",
+                    "text": "Get Started",
+                    "style": {
+                      "type": "TextStyle",
+                      "color": "#204866",
+                      "fontSize": 32.0,
+                      "fontWeight": "bold"
+                    }
+                  }
+                },
+                {
+                  "type": "SizedBox",
+                  "height": 24.0
+                },
+                {
+                  "type": "TextField",
+                  "attribute": "name",
+                  "initialValue": "Purushotam Kumar",
+                  "keyboardType": "text",
+                  "maxLines": 1,
+                  "inputDecoration": {
+                    "labelText": "Name"
+                  },
+                  "validators": {
+                    "minLength": 3,
+                    "maxLength": 50
+                  },
+                  "textInputAction": "next"
+                },
+                {
+                  "type": "SizedBox",
+                  "height": 24.0
+                },
+                {
+                  "type": "TextField",
+                  "attribute": "address",
+                  "keyboardType": "text",
+                  "maxLines": 2,
+                  "inputDecoration": {
+                    "labelText": "Address"
+                  },
+                  "validators": {
+                    "minLength": 10,
+                    "maxLength": 100
+                  },
+                  "textInputAction": "next"
+                },
+                {
+                  "type": "SizedBox",
+                  "height": 24.0
+                },
+                {
+                  "type": "TextField",
+                  "attribute": "employer",
+                  "keyboardType": "text",
+                  "maxLines": 1,
+                  "inputDecoration": {
+                    "labelText": "Employer"
+                  },
+                  "validators": {
+                    "minLength": 3,
+                    "maxLength": 50
+                  },
+                  "textInputAction": "next"
+                },
+                {
+                  "type": "SizedBox",
+                  "height": 24.0
+                },
+                {
+                  "type": "TextField",
+                  "attribute": "employee_id",
+                  "keyboardType": "text",
+                  "maxLines": 1,
+                  "inputDecoration": {
+                    "labelText": "Employee ID"
+                  },
+                  "validators": {
+                    "minLength": 3,
+                    "maxLength": 50
+                  },
+                  "textInputAction": "next"
+                },
+                {
+                  "type": "SizedBox",
+                  "height": 24.0
+                },
+                {
+                  "type": "TextField",
+                  "attribute": "phone",
+                  "keyboardType": "phone",
+                  "maxLines": 1,
+                  "inputDecoration": {
+                    "labelText": "Phone Number",
+                    "prefixText": "+ 91 "
+                  },
+                  "validators": {
+                    "minLength": 10,
+                    "maxLength": 10
+                  },
+                  "textInputAction": "done"
+                },
+                {
+                  "type": "SizedBox",
+                  "height": 12.0
+                },
+                {
+                  "type": "SizedBox",
+                  "dynamicWidth": 1,
+                  "height": 56.0,
+                  "child": {
+                    "type": "RaisedButton",
+                    "color": "#2A9EDA",
+                    "textColor": "#FFFFFF",
+                    "shape": "32,32,32,32",
+                    "child": {
+                      "type": "Text",
+                      "data": "Continue",
+                      "textSpan": {
+                        "type": "TextSpan",
+                        "text": "Continue",
+                        "style": {
+                          "type": "TextStyle",
+                          "color": "#FFFFFF",
+                          "fontSize": 18.0,
+                          "clickEvent": {
+                            "eventType": "validate"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "SizedBox",
+                  "height": 32.0
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}
