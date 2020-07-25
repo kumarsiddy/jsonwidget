@@ -1,8 +1,11 @@
 import 'package:dynamic_widget/dynamic_widget.dart';
+import 'package:dynamic_widget/dynamic_widget/eventhandler/click_event.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_form_builder/flutter_form_builder.dart';
 
 class PreviewPage extends StatelessWidget {
   final String jsonString;
+  final GlobalKey<FormBuilderState> _fbKey = GlobalKey<FormBuilderState>();
 
   PreviewPage(this.jsonString);
 
@@ -31,14 +34,16 @@ class PreviewPage extends StatelessWidget {
   }
 
   Future<Widget> _buildWidget(BuildContext context) async {
-    return DynamicWidgetBuilder.build(
-        jsonString, context, new DefaultClickListener());
+    return DynamicWidgetBuilder.build<FormBuilderState>(
+        jsonString, context, new DefaultClickListener(),
+        stateKey: _fbKey);
   }
 }
 
-class DefaultClickListener implements ClickListener {
+class DefaultClickListener implements ClickEventListener {
   @override
-  void onClicked(String event) {
-    print("Receive click event: " + event);
+  void onClicked(ClickEvent event) {
+    print('onClick called');
+    print(event.toString());
   }
 }
