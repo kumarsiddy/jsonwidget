@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:dynamic_widget/dynamic_widget.dart';
 import 'package:dynamic_widget/dynamic_widget/eventhandler/click_event.dart';
 import 'package:flutter/cupertino.dart';
@@ -92,7 +94,9 @@ class _RefynePageState extends State<RefyneSamplePage> {
 
   Future<Widget> _buildWidget(BuildContext context) async {
     return DynamicWidgetBuilder.build<FormBuilderState>(
-        widget.jsonString, context, new DefaultClickListener(_fbKey),
+        widget.jsonString,
+        context,
+        new DefaultClickListener(_fbKey),
         stateKey: _fbKey);
   }
 
@@ -113,7 +117,7 @@ class DefaultClickListener implements ClickEventListener {
     switch (clickEvent.eventType) {
       case EventType.VALIDATE:
         if (fbKey.currentState.saveAndValidate()) {
-          print(fbKey.currentState.value['name']);
+          print(fbKey.currentState.value.toString());
         }
         break;
 //   TODO:: Need to add more
@@ -123,4 +127,6 @@ class DefaultClickListener implements ClickEventListener {
       _handleClickEvent(clickEvent.onFinish);
     }
   }
+
+
 }

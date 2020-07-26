@@ -1,5 +1,3 @@
-var sampleJson = '''
-
 {
   "type": "Stack",
   "children": [
@@ -157,6 +155,10 @@ var sampleJson = '''
                     "color": "#2A9EDA",
                     "textColor": "#FFFFFF",
                     "shape": "32,32,32,32",
+                    "clickEvent": {
+                      "eventType": "VALIDATE",
+                      "uri": "/debug"
+                    },
                     "child": {
                       "type": "Text",
                       "data": "Continue",
@@ -166,10 +168,7 @@ var sampleJson = '''
                         "style": {
                           "type": "TextStyle",
                           "color": "#FFFFFF",
-                          "fontSize": 18.0,
-                          "clickEvent": {
-                            "eventType": "validate"
-                          }
+                          "fontSize": 18.0
                         }
                       }
                     }
@@ -187,7 +186,3 @@ var sampleJson = '''
     }
   ]
 }
-
-
-
-''';

@@ -4,7 +4,6 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:jsonwidget/resources/colors.dart';
 import 'package:jsonwidget/src/code_editor_page.dart';
-import 'package:jsonwidget/src/sampledata.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -39,7 +38,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: _getAppTheme(context),
-      home: CodeEditorPage(sampleJson),
+      home: CodeEditorPage(),
     );
   }
 }
@@ -47,8 +46,8 @@ class MyApp extends StatelessWidget {
 _getAppTheme(BuildContext context) {
   return ThemeData(
     primaryColor: AppColor.PRIMARY.color,
-    primaryColorDark: AppColor.PRIMARY_DARK.color,
     accentColor: AppColor.ACCENT.color,
+    primarySwatch: MaterialColor(AppColor.PRIMARY_DARK.color.value, colorCodes),
     primaryIconTheme:
         Theme.of(context).accentIconTheme.copyWith(color: AppColor.WHITE.color),
     accentIconTheme:
